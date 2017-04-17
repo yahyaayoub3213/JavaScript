@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log(1);
+    console.log('a',new Date().getTime());
+
+    setTimeout(function(){
+        console.log(2);
+        console.log('第一个setTimeout执行结束',new Date().getTime());
+    },5000);
+    setTimeout(function(){
+        console.log(3);
+        console.log('第二个setTimeout执行结束',new Date().getTime());
+    },4000);
+
+
+    console.log('开始执行for循环',new Date().getTime());
+    for (var i = 0;i<10000;i++) {
+        console.log(4);
+    }
+    console.log('for循环执行结束',new Date().getTime());
+    setTimeout(function(){
+        console.log(5);
+        console.log('第三个setTimeout执行结束',new Date().getTime());
+    },3000);
+</script>
+</body>
+</html>
