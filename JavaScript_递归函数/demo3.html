@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Foo(){
+        getName = function() {
+            alert (1);
+        };
+        return this;
+    }//首先声明了一个叫Foo的函数，
+
+    var getName = function(){
+        alert (5);
+    };
+    Foo().getName();
+   getName();
+</script>
+</body>
+</html>
