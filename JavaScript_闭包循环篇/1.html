@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    var arr = [
+        {"groupName":"1001","name":"值1","value":"111"},
+        {"groupName":"1001","name":"值2","value":"777111"},
+        {"groupName":"1002","name":"值2","value":"25462"},
+        {"groupName":"1002","name":"值2","value":"23131"},
+        {"groupName":"1004","name":"值2","value":"2315432"},
+        {"groupName":"1003","name":"值3","value":"333333"}
+    ];
+
+    var map = {},
+        dest = [];
+    for(var i = 0; i < arr.length; i++){
+        var ai = arr[i];
+        if(!map[ai.groupName]){
+            dest.push({
+                groupName: ai.groupName,
+                name: ai.name,
+                data: [ai]
+            });
+            map[ai.groupName] = ai;
+        }else{
+            for(var j = 0; j < dest.length; j++){
+                var dj = dest[j];
+                if(dj.groupName == ai.groupName){
+                    dj.data.push(ai);
+                    break;
+                }
+            }
+        }
+    }
+
+    console.log(dest);
+</script>
+
+</body>
+</html>

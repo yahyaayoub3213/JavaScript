@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (var i = 0; i < 5; i++) {
+        setTimeout(function() {
+            console.log('执行i setTimeout结束',i,new Date().getTime());
+        }, 6000);
+    }
+    console.log(i);
+
+    for(var j = 0; j<100;j++){
+        setTimeout(function(){
+            console.log('执行j setTimeout结束',j,new Date().getTime());
+        },2000)
+    }
+    console.log(j);
+    console.log('开始计算setTimeout',new Date().getTime());
+
+</script>
+</body>
+</html>

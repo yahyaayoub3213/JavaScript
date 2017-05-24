@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    function foo(){
+        console.log(this.a)
+    }
+    var a = 3;
+    var b  = 100;
+
+    var obj = {
+        a: 2,
+        b: 10,
+        foo: function(){
+            console.log(this.b)
+        }
+    };
+
+    obj.foo(); // 输出2,因为是obj调用的foo，所以foo的this指向了obj，而obj.a = 2
+
+
+</script>
+</html>

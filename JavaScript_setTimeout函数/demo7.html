@@ -6,22 +6,48 @@
 </head>
 <body>
 <script>
+    var arr = [];
     console.log(1);
-
+    console.log('第一个setTimeout放入队列中',new Date().getTime())
     setTimeout(function(){
-        console.log(2);
-    },3000);
-
+        console.log(2,'第一个setTimeout执行完成', new Date().getTime());
+    },6000);
+    console.log('第二个setTimeout放入队列中',new Date().getTime())
     setTimeout(function(){
-        console.log(3)
+        console.log(3,'第二个setTimeout执行完成',new Date().getTime())
     },4000);
-
-    for (var i = 0;i<10000;i++) {
-        console.log(4);
+    console.log('for循环开始',new Date().getTime())
+    for (var i = 0;i<100000000;i++) {
+        arr.push(i);
     }
+    console.log('for循环结束',new Date().getTime());
+    console.log('第三个setTimeout放入队列中',new Date().getTime())
     setTimeout(function(){
-        console.log(5);
-    },1000);
+        console.log(5,'第三个setTimeout执行完成',new Date().getTime());
+    },2000);
+    console.log(6);
+    console.log('开始执行队列任务',new Date().getTime())
+//    var arr = [];
+//    console.log(1);
+//    console.log('第一个setTimeout放入队列中',new Date().getTime())
+//    setTimeout(function(){
+//        console.log(2,'第一个setTimeout执行完成', new Date().getTime());
+//    },600);
+//    console.log('第二个setTimeout放入队列中',new Date().getTime())
+//    setTimeout(function(){
+//        console.log(3,'第二个setTimeout执行完成',new Date().getTime())
+//    },400);
+//    console.log('for循环开始',new Date().getTime())
+//    for (var i = 0;i<100000000;i++) {
+//        arr.push(i);
+//    }
+//    console.log('for循环结束',new Date().getTime());
+//    console.log('第三个setTimeout放入队列中',new Date().getTime())
+//    setTimeout(function(){
+//        console.log(5,'第三个setTimeout执行完成',new Date().getTime());
+//    },200);
+//    console.log(6);
+//    console.log('开始执行队列任务',new Date().getTime())
 </script>
 </body>
 </html>
