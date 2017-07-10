@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var global = {name:"Woody"};
+    (function (global) {
+        var first_name = 'Tom';
+        var last_name = 'Cruise';
+        function fullname(){
+            return first_name + last_name;
+        }
+        console.log(fullname());
+        console.log(global.name);
+    }(global));
+</script>
+</body>
+</html>

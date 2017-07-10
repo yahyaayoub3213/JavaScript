@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var foo = {};
+    foo.bar = 'hello';
+    console.log(foo.length);
+    function say(){
+        var num = 666;
+        var sayAlert= function(){
+            alert(num);
+        };
+        num++;
+        return sayAlert;
+    }
+    var sayAlert = say();
+    sayAlert();
+</script>
+
+</body>
+</html>

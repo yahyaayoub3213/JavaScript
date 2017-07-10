@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    在一个 HTML DOM 事件处理程序里，this 始终指向这个处理程序所绑定的 HTML DOM 节点：
+</div>
+<div id="foo">11111</div>
+</body>
+<script>
+    function Listener(){
+        document.getElementById('foo').addEventListener('click', this.handleClick);     //这里的 this 指向 Listener 这个对象。不是强调的是这里的 this
+    }
+    Listener.prototype.handleClick = function (event) {
+        console.log(this);    //<div id="foo"></div>
+    };
+    var listener = new Listener();
+//
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var myName = (function () {
+        var first_name = 'Tom';
+        var last_name = ' Cruise';
+        return {
+            'fullname': function(){
+                return first_name + last_name;
+            }
+        }
+    }());
+    myName.fullname() //Tom Cruise
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    对象方法
+</div>
+</body>
+<script>
+//    var a = 3;
+//    var b  = 100;
+//
+//    var obj = {
+//        a: 2,
+//        b: 10,
+//        foo: function(){
+//            console.log(this.b)
+//        }
+//    };
+//    obj.foo(); // 输出2,因为是obj调用的foo，所以foo的this指向了obj，而obj.a = 2
+
+</script>
+
+<script>
+//第一种例外：对象方法里面再次嵌套函数
+//var a = 3;
+//var b  = 100;
+//
+//var obj = {
+//    a: 2,
+//    b: 10,
+//    foo: function(){
+//        function fn() {
+//            console.log(this.b);
+//        }
+//        fn();
+//    }
+//};
+//obj.foo(); // 输出100 函数 f 虽然是在 obj.foo 内部定义的，但它仍然属于一个普通函数，this 仍指向 window。
+</script>
+
+<script>
+    //例外二：函数不作为对象方法被调用：
+    var a = 3;
+    var b  = 100;
+
+    var obj = {
+        a: 2,
+        b: 10,
+        foo: function(){
+            console.log(this.b);
+        }
+    };
+    var fn = obj.foo;
+    fn(); // 输出100 函数 f 虽然是在 obj.foo 内部定义的，但它仍然属于一个普通函数，this 仍指向 window。
+</script>
+</html>

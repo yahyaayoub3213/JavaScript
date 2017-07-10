@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var arr = [1,1,2,3,4,3];
+    function unique(array){
+        var res = [];
+        for(var i = 0, len=array.length; i<len;i++ ){
+            var item = array[i];
+            (res.indexOf(item)===-1 && res.push(item));
+        }
+        return res;
+    }
+    console.log(unique(arr));
+</script>
+</body>
+</html>

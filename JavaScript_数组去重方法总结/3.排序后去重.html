@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var arr = [1,1,2,3,4,3];
+    function unique(array){
+        var res = [];
+        var sortedArray = array.sort();
+        var seen;
+        for(var i = 0, len=sortedArray.length; i<len;i++ ){
+            if(!i || seen !== sortedArray[i]){
+                res.push(sortedArray[i])
+            }
+            seen = sortedArray[i];
+        }
+        return res;
+    }
+    console.log(unique(arr));
+</script>
+</body>
+</html>
